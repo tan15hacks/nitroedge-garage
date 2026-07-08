@@ -116,7 +116,28 @@ const faqs = [
   },
 ];
 
-const process = ["Inspect", "Foam wash", "Correct", "Protect", "Deliver"];
+const process = [
+  {
+    title: "Inspect",
+    copy: "Paint, trim, wheels, and surface condition.",
+  },
+  {
+    title: "Foam Wash",
+    copy: "Deep pre-wash and safe contact cleaning.",
+  },
+  {
+    title: "Correct",
+    copy: "Swirl removal and gloss refinement.",
+  },
+  {
+    title: "Protect",
+    copy: "Sealant or ceramic coating application.",
+  },
+  {
+    title: "Deliver",
+    copy: "Final wipe, inspection, and handoff.",
+  },
+];
 
 const stripItems = ["Ceramic coating", "Paint correction", "Performance detailing", "Showroom finish"];
 
@@ -409,9 +430,10 @@ export default function Home() {
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-5">
             {process.map((step, index) => (
-              <div key={step} data-reveal className="metal-card rounded-[1.6rem] p-6">
+              <div key={step.title} data-reveal className="metal-card rounded-[1.6rem] p-6">
                 <div className="font-display text-5xl font-bold italic text-red-500">0{index + 1}</div>
-                <h3 className="font-display mt-8 text-2xl font-bold uppercase italic text-white">{step}</h3>
+                <h3 className="font-display mt-8 text-2xl font-bold uppercase italic text-white">{step.title}</h3>
+                <p className="mt-4 text-sm font-semibold leading-6 text-zinc-400">{step.copy}</p>
               </div>
             ))}
           </div>
@@ -483,10 +505,39 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 px-5 py-10 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 text-sm font-semibold text-zinc-500 md:flex-row md:items-center">
-          <div><div className="font-display text-2xl font-bold uppercase italic tracking-[0.12em] text-white">NitroEdge Garage</div><p className="mt-2">Premium car detailing and performance auto care landing page concept.</p></div>
-          <div className="flex flex-wrap gap-3"><a className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-white" href="#booking"><MessageCircle size={16} /> Start booking</a><a className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-white" href="#services"><BadgeCheck size={16} /> View services</a></div>
+      <footer className="border-t border-white/10 bg-[#080809] px-5 py-14 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 text-sm font-semibold text-zinc-500 md:grid-cols-[1.35fr_0.85fr_0.85fr_0.85fr]">
+          <div>
+            <div className="font-display text-3xl font-bold uppercase italic tracking-[0.12em] text-white">NitroEdge Garage</div>
+            <p className="mt-4 max-w-md leading-7">Premium car detailing, ceramic coating, paint correction, and showroom finish packages for drivers who want sharper paint and stronger road presence.</p>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-black uppercase tracking-[0.24em] text-red-500">Services</h3>
+            <div className="mt-5 space-y-3">
+              <a href="#services" className="block text-zinc-300 hover:text-white">Detailing</a>
+              <a href="#services" className="block text-zinc-300 hover:text-white">Ceramic Coating</a>
+              <a href="#services" className="block text-zinc-300 hover:text-white">Paint Correction</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-black uppercase tracking-[0.24em] text-red-500">Company</h3>
+            <div className="mt-5 space-y-3">
+              <a href="#results" className="block text-zinc-300 hover:text-white">Results</a>
+              <a href="#packages" className="block text-zinc-300 hover:text-white">Packages</a>
+              <a href="#process" className="block text-zinc-300 hover:text-white">Process</a>
+              <a href="#faq" className="block text-zinc-300 hover:text-white">FAQ</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-black uppercase tracking-[0.24em] text-red-500">Contact</h3>
+            <div className="mt-5 flex flex-col gap-3">
+              <a className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-white hover:border-red-500/40" href="#booking"><MessageCircle size={16} /> Book a Detail</a>
+              <a className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-white hover:border-red-500/40" href="#services"><BadgeCheck size={16} /> View Services</a>
+            </div>
+          </div>
         </div>
       </footer>
     </main>

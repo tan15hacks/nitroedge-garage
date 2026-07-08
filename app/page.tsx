@@ -165,9 +165,13 @@ function updateCarouselIndex(element: HTMLDivElement | null, setIndex: (index: n
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [toast, setToast] = useState("");
+  const [serviceIndex, setServiceIndex] = useState(0);
   const [packageIndex, setPackageIndex] = useState(0);
+  const [processIndex, setProcessIndex] = useState(0);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const serviceRef = useRef<HTMLDivElement | null>(null);
   const packageRef = useRef<HTMLDivElement | null>(null);
+  const processRef = useRef<HTMLDivElement | null>(null);
   const testimonialRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -349,17 +353,21 @@ export default function Home() {
             <p className="max-w-md font-semibold leading-7 text-zinc-400">From deep cleaning to ceramic protection, NitroEdge is designed for drivers who want every angle to hit harder.</p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div ref={serviceRef} onScroll={() => updateCarouselIndex(serviceRef.current, setServiceIndex)} className="scrollbar-none -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3">
             {services.map((service) => {
               const Icon = service.icon;
               return (
-                <article key={service.title} data-reveal className="metal-card rounded-[1.75rem] p-7">
+                <article key={service.title} data-reveal className="metal-card min-w-[86vw] snap-center rounded-[1.75rem] p-7 md:min-w-0">
                   <div className="grid h-14 w-14 place-items-center rounded-2xl bg-red-600 text-white shadow-xl shadow-red-600/20"><Icon size={23} /></div>
                   <h3 className="font-display mt-8 text-3xl font-bold uppercase italic text-white">{service.title}</h3>
                   <p className="mt-4 text-[15px] font-semibold leading-7 text-zinc-400">{service.copy}</p>
                 </article>
               );
             })}
+          </div>
+
+          <div className="mt-4 flex justify-center gap-2 md:hidden" aria-hidden="true">
+            {services.map((service, index) => <span key={service.title} className={`h-2 rounded-full transition-all ${serviceIndex === index ? "w-7 bg-red-500" : "w-2 bg-white/25"}`} />)}
           </div>
         </div>
       </section>
@@ -428,14 +436,18 @@ export default function Home() {
             <p className="text-sm font-black uppercase tracking-[0.32em] text-red-500">Process</p>
             <h2 className="font-display mt-4 text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">Precision From First Wash to Final Wipe.</h2>
           </div>
-          <div className="mt-14 grid gap-4 md:grid-cols-5">
+          <div ref={processRef} onScroll={() => updateCarouselIndex(processRef.current, setProcessIndex)} className="scrollbar-none -mx-5 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 md:mx-0 md:grid md:grid-cols-5 md:overflow-visible md:px-0 md:pb-0">
             {process.map((step, index) => (
-              <div key={step.title} data-reveal className="metal-card rounded-[1.6rem] p-6">
+              <article key={step.title} data-reveal className="metal-card min-w-[78vw] snap-center rounded-[1.6rem] p-6 md:min-w-0">
                 <div className="font-display text-5xl font-bold italic text-red-500">0{index + 1}</div>
                 <h3 className="font-display mt-8 text-2xl font-bold uppercase italic text-white">{step.title}</h3>
                 <p className="mt-4 text-sm font-semibold leading-6 text-zinc-400">{step.copy}</p>
-              </div>
+              </article>
             ))}
+          </div>
+
+          <div className="mt-4 flex justify-center gap-2 md:hidden" aria-hidden="true">
+            {process.map((step, index) => <span key={step.title} className={`h-2 rounded-full transition-all ${processIndex === index ? "w-7 bg-red-500" : "w-2 bg-white/25"}`} />)}
           </div>
         </div>
       </section>

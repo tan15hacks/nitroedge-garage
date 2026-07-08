@@ -15,20 +15,23 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nitroedge-garage.vercel.app"),
-  title: "NitroEdge Garage — Detailing & Performance Auto Care",
+  title: "NitroEdge Garage | Premium Car Detailing & Ceramic Coating",
   description:
-    "A dark, aggressive, premium landing page for a performance-focused auto detailing and ceramic coating garage.",
+    "NitroEdge Garage offers premium car detailing, ceramic coating, paint correction, interior deep cleaning, and showroom finish packages for drivers who want their vehicle to look sharper, cleaner, and protected.",
   keywords: [
     "car detailing",
+    "auto detailing",
     "ceramic coating",
-    "auto shop landing page",
+    "paint correction",
+    "interior deep cleaning",
+    "showroom finish",
     "performance garage",
     "NitroEdge Garage",
   ],
   openGraph: {
-    title: "NitroEdge Garage — Premium Auto Detailing",
+    title: "NitroEdge Garage | Premium Car Detailing & Ceramic Coating",
     description:
-      "Sharper paint, deeper gloss, and premium vehicle enhancement services for drivers who care.",
+      "Premium car detailing, ceramic coating, paint correction, and showroom finish packages for sharper, cleaner, protected vehicles.",
     url: "https://nitroedge-garage.vercel.app",
     siteName: "NitroEdge Garage",
     images: [
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "NitroEdge Garage performance auto care landing page",
+        alt: "NitroEdge Garage premium car detailing and ceramic coating landing page",
       },
     ],
     locale: "en_US",
@@ -44,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NitroEdge Garage — Premium Auto Detailing",
+    title: "NitroEdge Garage | Premium Car Detailing & Ceramic Coating",
     description:
-      "A dark, aggressive landing page concept for a performance auto care brand.",
+      "A dark, aggressive landing page concept for premium car detailing, ceramic coating, and paint correction services.",
     images: ["/og-image.svg"],
   },
 };

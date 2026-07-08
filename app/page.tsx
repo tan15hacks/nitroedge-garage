@@ -2,7 +2,6 @@
 
 import {
   ArrowRight,
-  BadgeCheck,
   CalendarCheck,
   Car,
   Check,
@@ -12,7 +11,6 @@ import {
   Flame,
   Gauge,
   Menu,
-  MessageCircle,
   ShieldCheck,
   Sparkles,
   Star,
@@ -547,9 +545,11 @@ export default function Home() {
 
           <div>
             <h3 className="text-xs font-black uppercase tracking-[0.24em] text-red-500">Contact</h3>
-            <div className="mt-5 flex flex-col gap-3">
-              <a className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-white hover:border-red-500/40" href="#booking"><MessageCircle size={16} /> Book a Detail</a>
-              <a className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-white hover:border-red-500/40" href="#services"><BadgeCheck size={16} /> View Services</a>
+            <div className="mt-5 space-y-3">
+              <a href="mailto:nitroedgegarage@gmail.com" className="block text-zinc-300 hover:text-white">nitroedgegarage@gmail.com</a>
+              <a href="tel:+15550192888" className="block text-zinc-300 hover:text-white">+1 (555) 019-2888</a>
+              <a href="#" className="block text-zinc-300 hover:text-white">Instagram</a>
+              <a href="#" className="block text-zinc-300 hover:text-white">Facebook</a>
             </div>
           </div>
         </div>

@@ -90,6 +90,65 @@ select option {
   font-weight: 700;
 }
 
+header nav > div a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.45rem;
+  padding-inline: 0.18rem;
+  isolation: isolate;
+}
+
+header nav > div a::before {
+  content: "";
+  position: absolute;
+  inset: 0.12rem -0.72rem;
+  z-index: -1;
+  border: 1px solid rgba(255, 40, 53, 0.28);
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(227, 6, 19, 0.18), rgba(255, 255, 255, 0.055)),
+    rgba(255, 255, 255, 0.035);
+  box-shadow: 0 16px 42px rgba(227, 6, 19, 0.16);
+  opacity: 0;
+  transform: skewX(-10deg) scaleX(0.72) translateY(4px);
+  transition:
+    opacity 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+header nav > div a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.24rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #ff2835, transparent);
+  box-shadow: 0 0 18px rgba(255, 40, 53, 0.72);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+header nav > div a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 40, 53, 0.42);
+  transform: translateY(-2px);
+}
+
+header nav > div a:hover::before {
+  opacity: 1;
+  transform: skewX(-10deg) scaleX(1) translateY(0);
+  border-color: rgba(255, 40, 53, 0.52);
+}
+
+header nav > div a:hover::after {
+  transform: scaleX(1);
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;

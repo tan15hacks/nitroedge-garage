@@ -52,27 +52,27 @@ const services = [
   },
   {
     icon: Flame,
-    title: "Performance Styling",
-    copy: "Visual enhancement details for drivers who want their vehicle to look more aggressive.",
+    title: "Showroom Styling",
+    copy: "Finishing touches that make every angle look sharper, cleaner, and ready to turn heads.",
   },
 ];
 
 const packages = [
   {
-    name: "Street Clean",
+    name: "Street Detail",
     price: "$120",
     detail: "A sharp reset for daily drivers and weekend cars.",
     features: ["Exterior foam wash", "Wheel and tire detail", "Interior vacuum", "Quick gloss finish"],
   },
   {
-    name: "Ceramic Shield",
+    name: "Ceramic Armor",
     price: "$450",
     detail: "Paint protection for drivers who want gloss that lasts.",
     featured: true,
     features: ["Paint decontamination", "Gloss enhancement polish", "Ceramic coating", "Hydrophobic finish", "Care guide"],
   },
   {
-    name: "Full Performance Detail",
+    name: "Full Edge Detail",
     price: "$750",
     detail: "The complete NitroEdge treatment from paint to cabin.",
     features: ["Paint correction", "Ceramic protection", "Interior deep clean", "Engine bay detail", "Final inspection"],
@@ -86,7 +86,7 @@ const testimonials = [
     car: "BMW M4 Owner",
   },
   {
-    quote: "Ceramic Shield was worth it. Water slides off, the gloss is insane, and the finish still looks freshly detailed.",
+    quote: "Ceramic Armor was worth it. Water slides off, the gloss is insane, and the finish still looks freshly detailed.",
     name: "Eli Navarro",
     car: "Subaru WRX Owner",
   },
@@ -226,7 +226,7 @@ export default function Home() {
           </div>
 
           <a href="#booking" className="red-button hidden rounded-full bg-red-600 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-xl shadow-red-600/20 lg:inline-flex">
-            Book now
+            Book a Detail
           </a>
 
           <button
@@ -265,25 +265,25 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="animate-[fade-up_900ms_cubic-bezier(0.22,1,0.36,1)_both]">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-600/10 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-red-400">
-              <Gauge size={15} /> Performance auto care
+              <Gauge size={15} /> Premium Auto Detailing & Ceramic Coating
             </div>
             <h1 className="font-display max-w-4xl text-6xl font-bold uppercase italic leading-[0.88] tracking-[-0.05em] text-white sm:text-7xl lg:text-[6.9rem]">
-              Sharper paint. Deeper gloss. Built for drivers who care.
+              Sharper Paint. Deeper Gloss. Built to Turn Heads.
             </h1>
             <p className="mt-8 max-w-2xl text-lg font-semibold leading-8 text-zinc-300">
-              NitroEdge Garage delivers premium detailing, ceramic coating, and vehicle enhancement services for cars that deserve a sharper, cleaner, more powerful presence.
+              NitroEdge Garage delivers premium car detailing, ceramic coating, and paint correction for drivers who want a cleaner finish, deeper shine, and stronger road presence.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="#booking" className="red-button inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-white shadow-2xl shadow-red-600/25">
-                Book a detail <ArrowRight size={17} />
+                Book a Detail <ArrowRight size={17} />
               </a>
               <a href="#services" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-white hover:bg-white/[0.08]">
-                View services
+                View Services
               </a>
             </div>
 
             <div className="mt-12 grid max-w-2xl grid-cols-3 gap-3">
-              {[["3.8K+", "cars detailed"], ["5 yr", "coating grade"], ["4.9/5", "owner rating"]].map(([value, label]) => (
+              {[["3.8K+", "Cars Detailed"], ["5 Yrs", "Coating Experience"], ["4.9/5", "Average Rating"]].map(([value, label]) => (
                 <div key={label} className="metal-card rounded-3xl p-4">
                   <div className="font-display text-3xl font-bold italic text-white">{value}</div>
                   <div className="mt-1 text-[11px] font-black uppercase tracking-[0.18em] text-red-400">{label}</div>
@@ -299,7 +299,7 @@ export default function Home() {
             <div className="image-boost hero-glow relative overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 p-3 shadow-2xl shadow-red-600/20">
               <img
                 src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1500&q=90"
-                alt="Glossy black performance car in a dark garage"
+                alt="Premium car detailing and ceramic coating for a glossy black performance car"
                 className="h-[560px] w-full rounded-[1.55rem] object-cover"
               />
               <div className="absolute inset-3 rounded-[1.55rem] bg-gradient-to-t from-black via-black/30 to-transparent" />
@@ -323,7 +323,7 @@ export default function Home() {
           <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.32em] text-red-500">Services</p>
-              <h2 className="font-display mt-4 max-w-4xl text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">Auto care built for gloss, grit, and road presence.</h2>
+              <h2 className="font-display mt-4 max-w-4xl text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">Detailing Built for Gloss, Grit, and Road Presence.</h2>
             </div>
             <p className="max-w-md font-semibold leading-7 text-zinc-400">From deep cleaning to ceramic protection, NitroEdge is designed for drivers who want every angle to hit harder.</p>
           </div>
@@ -347,8 +347,8 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.32em] text-red-500">Results</p>
-            <h2 className="font-display mt-4 text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">From tired paint to weapon-grade shine.</h2>
-            <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-zinc-400">The NitroEdge process removes contamination, refines imperfections, and locks in protection so the vehicle leaves with stronger gloss and a harder visual presence.</p>
+            <h2 className="font-display mt-4 text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">From Tired Paint to Weapon-Grade Shine.</h2>
+            <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-zinc-400">The NitroEdge process removes contamination, corrects imperfections, and locks in protection so every surface reflects sharper, cleaner, and harder.</p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {["Swirl reduction", "Hydrophobic protection", "Mirror-like gloss", "Aggressive finish"].map((item) => (
                 <div key={item} className="metal-card flex items-center gap-3 rounded-full px-4 py-3 text-sm font-black uppercase tracking-[0.08em] text-zinc-200">
@@ -360,11 +360,11 @@ export default function Home() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="image-boost overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-3">
-              <img src="/before.png" alt="Performance car before detail" className="h-[430px] w-full rounded-[1.2rem] object-cover opacity-75 grayscale" />
+              <img src="/before.png" alt="Same performance car before car detailing and paint correction" className="h-[430px] w-full rounded-[1.2rem] object-cover opacity-75 grayscale" />
               <div className="mt-4 text-xs font-black uppercase tracking-[0.25em] text-zinc-500">Before</div>
             </div>
             <div className="image-boost overflow-hidden rounded-[1.75rem] border border-red-500/30 bg-red-600/10 p-3 shadow-2xl shadow-red-600/10 sm:translate-y-10">
-              <img src="/after.png" alt="Performance car after NitroEdge detail" className="h-[430px] w-full rounded-[1.2rem] object-cover" />
+              <img src="/after.png" alt="Same performance car after ceramic coating and premium auto detailing" className="h-[430px] w-full rounded-[1.2rem] object-cover" />
               <div className="mt-4 text-xs font-black uppercase tracking-[0.25em] text-red-400">After NitroEdge</div>
             </div>
           </div>
@@ -376,9 +376,9 @@ export default function Home() {
           <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.32em] text-red-500">Packages</p>
-              <h2 className="font-display mt-4 max-w-3xl text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">Choose your level of edge.</h2>
+              <h2 className="font-display mt-4 max-w-3xl text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">Choose Your Level of Edge.</h2>
             </div>
-            <p className="max-w-md font-semibold leading-7 text-zinc-400">Mobile users can swipe through packages. Desktop keeps the full three-card comparison layout.</p>
+            <p className="max-w-md font-semibold leading-7 text-zinc-400">Mobile users can swipe through packages. Desktop users can compare every finish tier side by side.</p>
           </div>
 
           <div ref={packageRef} onScroll={() => updateCarouselIndex(packageRef.current, setPackageIndex)} className="scrollbar-none -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:pb-0">
@@ -405,7 +405,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-black uppercase tracking-[0.32em] text-red-500">Process</p>
-            <h2 className="font-display mt-4 text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">Precision from intake to final wipe.</h2>
+            <h2 className="font-display mt-4 text-5xl font-bold uppercase italic leading-none tracking-[-0.04em] sm:text-6xl">Precision From First Wash to Final Wipe.</h2>
           </div>
           <div className="mt-14 grid gap-4 md:grid-cols-5">
             {process.map((step, index) => (
@@ -462,11 +462,12 @@ export default function Home() {
       <section id="booking" data-reveal className="px-5 py-24 lg:px-8">
         <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#101013] shadow-2xl shadow-red-600/10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="image-boost relative min-h-[480px] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=1200&q=90" alt="Car detailing garage bay" className="absolute inset-0 h-full w-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=1200&q=90" alt="Auto detailing garage bay for car detailing and ceramic coating service" className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8">
               <p className="text-sm font-black uppercase tracking-[0.3em] text-red-400">Book your edge</p>
-              <h2 className="font-display mt-3 text-5xl font-bold uppercase italic leading-none text-white">Tell us what you drive.</h2>
+              <h2 className="font-display mt-3 text-5xl font-bold uppercase italic leading-none text-white">Tell Us What You Drive.</h2>
+              <p className="mt-4 max-w-md text-sm font-bold leading-6 text-zinc-300">Send your vehicle details and preferred service. We’ll recommend the right finish package before you pull in.</p>
             </div>
           </div>
 
@@ -475,9 +476,9 @@ export default function Home() {
               <label className="space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Name<input name="name" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none placeholder:text-zinc-600 focus:border-red-500" placeholder="Your name" /></label>
               <label className="space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Vehicle<input name="vehicle" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none placeholder:text-zinc-600 focus:border-red-500" placeholder="BMW M4, Civic Type R..." /></label>
             </div>
-            <label className="block space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Service<select name="service" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none focus:border-red-500"><option>Premium Detailing</option><option>Ceramic Coating</option><option>Paint Correction</option><option>Interior Deep Clean</option><option>Full Performance Detail</option></select></label>
+            <label className="block space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Service<select name="service" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none focus:border-red-500"><option>Premium Detailing</option><option>Ceramic Coating</option><option>Paint Correction</option><option>Interior Deep Clean</option><option>Full Edge Detail</option></select></label>
             <label className="block space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Message<textarea name="message" rows={5} className="w-full resize-none rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none placeholder:text-zinc-600 focus:border-red-500" placeholder="Tell us your paint condition, goals, and preferred schedule." /></label>
-            <button className="red-button inline-flex w-full items-center justify-center gap-2 rounded-full bg-red-600 px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-white sm:w-auto">Request booking <CalendarCheck size={17} /></button>
+            <button className="red-button inline-flex w-full items-center justify-center gap-2 rounded-full bg-red-600 px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-white sm:w-auto">Request My Detail <CalendarCheck size={17} /></button>
           </form>
         </div>
       </section>

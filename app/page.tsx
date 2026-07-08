@@ -208,10 +208,11 @@ export default function Home() {
     const form = event.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
     const vehicle = String(data.get("vehicle") || "").trim();
 
-    if (!name || !vehicle) {
-      setToast("Add your name and vehicle model first.");
+    if (!name || !email.includes("@") || !vehicle) {
+      setToast("Add your name, email, and vehicle model first.");
       return;
     }
 
@@ -506,9 +507,10 @@ export default function Home() {
           </div>
 
           <form onSubmit={handleInquiry} className="space-y-5 p-6 sm:p-10 lg:p-14">
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               <label className="space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Name<input name="name" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none placeholder:text-zinc-600 focus:border-red-500" placeholder="Your name" /></label>
-              <label className="space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Vehicle<input name="vehicle" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none placeholder:text-zinc-600 focus:border-red-500" placeholder="BMW M4, Civic Type R..." /></label>
+              <label className="space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Email<input name="email" type="email" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none placeholder:text-zinc-600 focus:border-red-500" placeholder="you@email.com" /></label>
+              <label className="space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400 sm:col-span-2 lg:col-span-1">Vehicle<input name="vehicle" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none placeholder:text-zinc-600 focus:border-red-500" placeholder="BMW M4, Civic Type R..." /></label>
             </div>
             <label className="block space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Service<select name="service" className="w-full rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none focus:border-red-500"><option>Premium Detailing</option><option>Ceramic Coating</option><option>Paint Correction</option><option>Interior Deep Clean</option><option>Full Edge Detail</option></select></label>
             <label className="block space-y-2 text-sm font-black uppercase tracking-[0.12em] text-zinc-400">Message<textarea name="message" rows={5} className="w-full resize-none rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none placeholder:text-zinc-600 focus:border-red-500" placeholder="Tell us your paint condition, goals, and preferred schedule." /></label>

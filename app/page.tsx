@@ -360,11 +360,11 @@ export default function Home() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="image-boost overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-3">
-              <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=90" alt="Performance car before detail" className="h-[430px] w-full rounded-[1.2rem] object-cover opacity-75 grayscale" />
+              <img src="/before.png" alt="Performance car before detail" className="h-[430px] w-full rounded-[1.2rem] object-cover opacity-75 grayscale" />
               <div className="mt-4 text-xs font-black uppercase tracking-[0.25em] text-zinc-500">Before</div>
             </div>
             <div className="image-boost overflow-hidden rounded-[1.75rem] border border-red-500/30 bg-red-600/10 p-3 shadow-2xl shadow-red-600/10 sm:translate-y-10">
-              <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1000&q=90" alt="Performance car after NitroEdge detail" className="h-[430px] w-full rounded-[1.2rem] object-cover" />
+              <img src="/after.png" alt="Performance car after NitroEdge detail" className="h-[430px] w-full rounded-[1.2rem] object-cover" />
               <div className="mt-4 text-xs font-black uppercase tracking-[0.25em] text-red-400">After NitroEdge</div>
             </div>
           </div>
